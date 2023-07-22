@@ -31,7 +31,7 @@
 
 # var from roles
 
-- name: load variable from file
+- name: load variable from roles
   hosts: all
   roles:
     - sample
