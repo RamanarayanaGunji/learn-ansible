@@ -29,5 +29,11 @@
       ansible.builtin.debug:
         msg: rama-{{ URL}}
 
+# var from roles
+
+- name: load variable from file
+  hosts: all
+  roles:
+    - sample
 
 
