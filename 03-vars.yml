@@ -18,4 +18,16 @@
   vars:
     URL: taskexample.com
 
+# Load var from file
+
+- name: load variable from file
+  hosts: all
+  vars_files:
+    - exvars.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: rama-{{ URL}}
+
+
 
