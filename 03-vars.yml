@@ -15,8 +15,8 @@
     - name: print URL
       ansible.builtin.debug:
         msg: rama-{{ URL }}
-  vars:
-    URL: taskexample.com
+      vars:
+        URL: taskexample.com
 
 # Load var from file
 
