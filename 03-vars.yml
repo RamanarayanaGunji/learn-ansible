@@ -9,3 +9,13 @@
           msg: rama-{{ URL }}
 
   # Demo on task level
+- name: task level  variables
+  hosts: all
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: rama-{{ URL }}
+  vars:
+    URL: taskexample.com
+
+
