@@ -4,8 +4,8 @@
 
 - name: print variables from role
   ansible.builtin.debug:
-    msg: URL - {{ URL }}
+    msg: URL -{{ URL }}
 
 - name: print variables from play
   ansible.builtin.debug:
-    msg: URL_PLAY - {{ URL_PLAY }}
+    msg: URL_PLAY -{{ URL_PLAY }}
