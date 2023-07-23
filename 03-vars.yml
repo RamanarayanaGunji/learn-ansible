@@ -51,6 +51,8 @@
     - name: Print output
       ansible.builtin.debug:
         msg: '{{ output }}'
+        # if I wasnt to print particulat KEY output ( WE can use DOT(.))
+        msg2: '{{ output.stdout }}'
 
 
 
