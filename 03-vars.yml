@@ -50,9 +50,9 @@
       register: output
     - name: Print output
       ansible.builtin.debug:
-        msg: '{{ output }}'
+        msg: '{{ output.stdout }}'
         # if I wasnt to print particulat KEY output ( WE can use DOT(.))
-        msg2: '{{ output.stdout }}'
+        #msg2: '{{ output.stdout }}'
 
 
 
