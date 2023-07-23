@@ -31,9 +31,19 @@
 
 # var from roles
 
-- name: load variable from roles
+- #name: load variable from roles
+  #hosts: all
+  #roles:
+   # - sample
+
+- name: demo on register variables
   hosts: all
-  roles:
-    - sample
+  tasks:
+    - name: run uptime shell command
+      ansible.builtin.shell: uptime
+      register: output
+    - name: print outout
+      ansible.builtin.debug:
+        msg: "{{ output }}"
 
 
