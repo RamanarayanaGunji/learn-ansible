@@ -36,7 +36,7 @@
 - name: variable from roles
   hosts: all
   vars:
-    #URL: role.example.com
+    URL: role.example.com    #  i have written for successful execution
     URL_PLAY: play.example.com
   roles:
     - sample
