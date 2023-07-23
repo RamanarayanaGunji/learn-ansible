@@ -29,14 +29,14 @@
     - name: print URL
       ansible.builtin.debug:
         msg: rama-{{ URL}}
-# vars_file does not support task lvele, it is for play level only.
+# vars_file does not support task level, it is for play level only.
 
 # var from roles
 
 - name: variable from roles
   hosts: all
   vars:
-    URL: role.example.com
+    #URL: role.example.com
     URL_PLAY: play.example.com
   roles:
     - sample
