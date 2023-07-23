@@ -9,6 +9,7 @@
           msg: rama-{{ URL }}
 
   # Demo on task level
+  # only that task have that variable, other tasks cannot access it.
 - name: task level  variables
   hosts: all
   tasks:
@@ -28,10 +29,11 @@
     - name: print URL
       ansible.builtin.debug:
         msg: rama-{{ URL}}
+# vars_file does not support task lvele, it is for play level only.
 
 # var from roles
 
-- name: load variable from roles
+- name: variable from roles
   hosts: all
   vars:
     URL_PLAY: play.example.com
